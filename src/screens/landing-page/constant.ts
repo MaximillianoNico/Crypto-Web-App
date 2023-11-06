@@ -11,12 +11,6 @@ export const TRADING_VIEW_CONFIG = {
   },
   crosshair: {
       mode: CrosshairMode.Normal,
-  },
-  layout: {
-    background: {
-      color: 'black',
-    },
-    textColor: 'rgba(255, 255, 255, 0.9)',
   }
 }
 
