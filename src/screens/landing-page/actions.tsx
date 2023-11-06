@@ -15,7 +15,7 @@ export const useOHLCCandles = () => {
         `${process?.env?.API_CRYPTOCOMPARE}/histoday?fsym=BTC&tsym=USD&limit=10`,
         {
           headers: {
-            'authorization': `Apikey 824b517e16d87b8c59b0de4df8ea7511df95b68888baf807357335a2b00df616`
+            'authorization': `Apikey ${process?.env?.CRYPTO_API_KEY}`
           }
         }
       )
