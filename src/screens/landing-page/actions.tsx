@@ -34,6 +34,7 @@ export const useOHLCCandles = () => {
           })
         ) : []
         
+        console.log('INITIALIZE: ', candlesData);
         candleRef.current.setData(candlesData)
       }
     } catch (err) {
@@ -57,7 +58,12 @@ export const useOHLCCandles = () => {
     }
   }, []);
 
-  const onUpdate = (payload = {}) => candleRef.current.update(payload);
+  const onUpdate = (payload = {}) => {
+    if (candleRef.current) {
+      console.log('on update', payload)
+      candleRef.current.update(payload);
+    }
+  }
 
   return { chartContainerRef, isFetching, onUpdate }
 }

@@ -9,7 +9,7 @@ import { useWebsocket } from "@/src/hooks/use-websocket";
 
 const Component = () => {
   const [mounted, setMounted] = useState(false);
-  const { isFetching, chartContainerRef, onUpdate } = useOHLCCandles();
+  const { chartContainerRef, onUpdate } = useOHLCCandles();
   const { orderBook, onUpdate: onUpdateOrderBook } = useOrderBook();
 
 
@@ -18,7 +18,7 @@ const Component = () => {
       if (!mounted) setMounted(true);
     }
 
-    if (values?.TYPE === WS_RESPONSE_TYPE.CANDLES && !isFetching) {
+    if (values?.TYPE === WS_RESPONSE_TYPE.CANDLES) {
       onUpdate({
         time: values?.TS,
         open: +values?.OPEN,
