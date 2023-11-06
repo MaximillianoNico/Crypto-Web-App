@@ -14,8 +14,7 @@ export const TRADING_VIEW_CONFIG = {
   },
   layout: {
     background: {
-      // type: 'solid',
-      color: 'transparan',
+      color: 'black',
     },
     textColor: 'rgba(255, 255, 255, 0.9)',
   }
