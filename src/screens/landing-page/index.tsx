@@ -43,7 +43,7 @@ const Component = () => {
   }
 
   const { wsRef, onSend } = useWebsocket({
-    wsUrl: 'wss://streamer.cryptocompare.com/v2?api_key=824b517e16d87b8c59b0de4df8ea7511df95b68888baf807357335a2b00df616',
+    wsUrl: `${process?.env?.WS_CRYPTOCOMPARE}?api_key=${process?.env?.CRYPTO_API_KEY}`,
     onMessage: onHandlerWSMessage,
     onOpen: () => {
       console.log('onOpen Websocket')

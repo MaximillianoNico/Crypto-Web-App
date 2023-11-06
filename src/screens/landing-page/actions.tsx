@@ -12,7 +12,7 @@ export const useOHLCCandles = () => {
     setIsFetching(true);
     try {
       const response = await fetch(
-        `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=10`,
+        `${process?.env?.API_CRYPTOCOMPARE}/histoday?fsym=BTC&tsym=USD&limit=10`,
         {
           headers: {
             'authorization': `Apikey 824b517e16d87b8c59b0de4df8ea7511df95b68888baf807357335a2b00df616`

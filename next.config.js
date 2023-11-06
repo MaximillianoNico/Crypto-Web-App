@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        NEXT_PUBLIC_CRYPTO_SECRET: "P5NcE6XB4OVtIqn8JHkAJwhh5INAYrhpf4AB0PfQ0TA1VemjhRJRriskCGf4VcrM",
-        NEXT_PUBLIC_CRYPTO_KEY: "NLyMC7vnmHpPyKloxf9bitYLfR2FZYkMkpOg00UrDpr5qjbJdGftIf2vfoqMBoM0"
+        API_CRYPTOCOMPARE: 'https://min-api.cryptocompare.com/data/v2',
+        WS_CRYPTOCOMPARE: 'wss://streamer.cryptocompare.com/v2',
+        CRYPTO_API_KEY: "824b517e16d87b8c59b0de4df8ea7511df95b68888baf807357335a2b00df616"
     }
 }
 
